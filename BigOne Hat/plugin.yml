@@ -1,0 +1,7 @@
+name: BigOne Hat
+main: me.BigOne.AdobeGFX.NorwayZaGa.Hat.Hat
+version: 1.0
+author: BigOne
+commands:
+   hat:
+     description: Puts the item in your hand on your head
