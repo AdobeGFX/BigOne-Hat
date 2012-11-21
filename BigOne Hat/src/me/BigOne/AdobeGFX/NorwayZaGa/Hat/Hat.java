@@ -35,24 +35,15 @@ public class Hat extends JavaPlugin
     }
     Player p = (Player)sender;
     ItemStack helmet = p.getInventory().getItemInHand();
-    if (command.getName().equalsIgnoreCase("hat")) {
       if (!p.hasPermission("BigOne.hat")) {
         p.sendMessage(this.permission);
         return true;
       }
-      if (args.length >= 0);
-      p.getInventory().setItemInHand(p.getInventory().getHelmet());
-      p.getInventory().setHelmet(helmet);
-      p.sendMessage(this.message1 + this.gray + p.getInventory().getHelmet().getType() + "(" + p.getInventory().getHelmet().getTypeId() + ")" + this.message2);
+      if (args.length != 0 || (args.length >= 0)) {
+    	  p.getInventory().setItemInHand(p.getInventory().getHelmet());
+          p.getInventory().setHelmet(helmet);
       return true;
-    }
-    if (p.getInventory().getItemInHand().equals("AIR")) {
-      p.getInventory().setItemInHand(p.getInventory().getHelmet());
-      p.getInventory().setHelmet(helmet);
-      p.sendMessage(this.green + "Du fjernet hjelmen din fra hodet.");
-      return true;
-    }
-
-    return false;
-  }
+      }
+	return false;
+}
 }
